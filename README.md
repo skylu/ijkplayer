@@ -195,9 +195,17 @@ git checkout -B latest k0.8.8
 
 ./init-ios.sh
 
+#if need https support
+#./init-ios-openssl.sh 
+#vim ../config/module.sh
+#add cmd in module.sh
+#export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-openssl"
+#../compile-ffmpeg.sh clean
+
 cd ios
 ./compile-ffmpeg.sh clean
 ./compile-ffmpeg.sh all
+
 
 # Demo
 #     open ios/IJKMediaDemo/IJKMediaDemo.xcodeproj with Xcode
@@ -226,6 +234,10 @@ cd ios
 #
 #         ... (Maybe something else, if you get any link error)
 # 
+# if want to support https
+# open IJKMediaPlayer project
+# create a new group name with OpenSSL
+# add libcrypto.a and libssl.a from ijkplayer-master/ios/build/universal/lib
 ```
 
 
