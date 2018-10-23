@@ -204,6 +204,7 @@ git checkout -B latest k0.8.8
 
 cd ios
 ./compile-ffmpeg.sh clean
+#./compile-openssl.sh all
 ./compile-ffmpeg.sh all
 
 
